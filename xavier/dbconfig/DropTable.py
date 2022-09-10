@@ -2,9 +2,9 @@ from ConnectionDB import Base,engine
 
 # keterangan tabel
 
-from migrations.OauthAccessTokenMigration import Oauth
-from migrations.PrivilegesMigration import Privileges
-from migrations.UsersMigration import Users
+from schema.OauthAccessTokenMigration import Oauth
+from schema.PrivilegesMigration import Privileges
+from schema.UsersMigration import Users
 
 # delete data
 

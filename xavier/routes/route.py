@@ -1,9 +1,7 @@
 from sys import prefix
 from fastapi import APIRouter,FastAPI, Depends, HTTPException,Request, Header,Response
 # middleware
-from xavier.app.middleware.Middleware import admin,auth,guest
 from fastapi.middleware.cors import CORSMiddleware
-from xavier.app.middleware.Authenticate import Auth
 import time
 from typing import Callable
 from fastapi.routing import APIRoute,APIWebSocketRoute
@@ -16,8 +14,8 @@ from jose.exceptions import JOSEError
 from xavier.app.model.UsersModel import UsersModel
 
 # api auth
-from xavier.app.api.auth.RestApiAuth import restAuth
-from xavier.app.api.ApiPrivileges import restPrivileges
+from xavier.app.controller.auth.RestApiAuth import restAuth
+from xavier.app.controller.ApiPrivileges import restPrivileges
 
 from xavier.app.helper.JwtToken import AuthHandler
 

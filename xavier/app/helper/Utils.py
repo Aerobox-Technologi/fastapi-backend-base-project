@@ -7,7 +7,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from dotenv import dotenv_values,load_dotenv
 from fastapi import HTTPException,Depends,status
 from pydantic import BaseModel
-from xavier.dbconfig.migrations import UsersMigration as models
+from xavier.dbconfig.schema import UsersMigration as models
 from xavier.dbconfig.ConnectionDB import Connection,engine
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session, aliased

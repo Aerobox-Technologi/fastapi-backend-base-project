@@ -6,7 +6,7 @@ from passlib.context import CryptContext
 from datetime import datetime, timedelta
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session, aliased
-from xavier.dbconfig.migrations import UsersMigration as models
+from xavier.dbconfig.schema import UsersMigration as models
 from xavier.dbconfig.ConnectionDB import Connection,engine
 from dotenv import dotenv_values,load_dotenv
 from fastapi import HTTPException,Depends,status

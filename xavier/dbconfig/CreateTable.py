@@ -6,9 +6,9 @@ from sqlalchemy.orm import Session
 
 from sqlalchemy import insert
 
-from migrations.UsersMigration import Users
-from migrations.PrivilegesMigration import Privileges
-from migrations.OauthAccessTokenMigration import Oauth
+from schema.UsersMigration import Users
+from schema.PrivilegesMigration import Privileges
+from schema.OauthAccessTokenMigration import Oauth
 from ConnectionDB import Base,engine
 
 from datetime import datetime

@@ -5,9 +5,7 @@ from fastapi import APIRouter, Depends, status
 from xavier.app.helper.Utils import verify_password,get_hashed_password
 from fastapi.responses import JSONResponse
 # import from file python
-
-from xavier.dbconfig.schemas import UsersSchema as schemas
-from xavier.dbconfig.migrations import UsersMigration as models
+from xavier.dbconfig.schema import UsersMigration as models
 from xavier.dbconfig.ConnectionDB import Connection,engine
 from pydantic import BaseModel, EmailStr,ValidationError, validator
 from sqlalchemy.exc import SQLAlchemyError

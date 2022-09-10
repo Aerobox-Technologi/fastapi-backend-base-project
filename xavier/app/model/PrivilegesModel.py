@@ -6,12 +6,12 @@ from fastapi import APIRouter, Depends, status
 from fastapi.responses import JSONResponse
 # import from file python
 
-from xavier.dbconfig.migrations import OauthAccessTokenMigration as models
+from xavier.dbconfig.schema import OauthAccessTokenMigration as models
 from xavier.dbconfig.ConnectionDB import Connection,engine
 from pydantic import BaseModel, EmailStr,ValidationError, validator
 from sqlalchemy.exc import SQLAlchemyError
 
-from xavier.dbconfig.migrations import PrivilegesMigration as models
+from xavier.dbconfig.schema import PrivilegesMigration as models
 
 #helper
 from xavier.app.helper.date import ConfigDate
