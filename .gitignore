@@ -1,2 +1,3 @@
-/__pycache__/
-/env/Lib/site-packages/
+__pycache__
+env
+.env
