@@ -37,3 +37,7 @@ __init__.py menandakan bahwa di dalam folder tersebut adalah sebuah modul, bikin
 pip install python-multipart
 
 https://github.com/ianrufus/youtube/tree/main/fastapi-jwt-auth/src
+
+gitignore not working
+
+git rm -r --cached .
