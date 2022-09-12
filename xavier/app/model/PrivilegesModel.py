@@ -19,12 +19,15 @@ from xavier.app.helper.date import ConfigDate
 class body_privileges(BaseModel):       
     name : str
 
+class pagination(BaseModel):
+    skip : int
+
 class PrivilegesModel:
 
-    def getAllPrivileges(skip: int = 0, limit: int = 10):
+    def getAllPrivileges(body, limit: int):
         try:
             db = Session(bind=engine,expire_on_commit=False)
-            data= db.query(models.Privileges).offset(skip).limit(limit).all()
+            data= db.query(models.Privileges).offset(body.skip).limit(limit).all()
             return {
                     "status":True,
                     "data":data,
@@ -109,7 +112,7 @@ class PrivilegesModel:
                 "message":errMsg,
             }
 
-    def updatePrivileges(id,body):
+    def updatePrivileges(body,id):
         try:
             db = Session(bind=engine,expire_on_commit=False)
             data = db.query(models.Privileges).filter(models.Privileges.id == id)
