@@ -19,3 +19,23 @@ Rule Respon
 2. 400 : bad request
 3. 500 : server error
 4. 401 : not autorize
+
+type array list
+
+Respon Json {
+"status" : True,
+"code" : 200,
+"message": "success save data",
+"data":[]
+}
+
+type select 1 data
+
+Respon Json {
+"status" : True,
+"code" : 200,
+"message": "success save data",
+"name":"niko figit setiawan",
+"email":0899999999,
+"status":"active",
+}
